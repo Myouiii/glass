@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card span 
+{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 250px;
+    background-color: #000;
+    border-radius: 50%;
+    transform-origin:125px 0;
+    transform: rotate(calc(90deg * var(--i)));
+    opacity: 0.750;
+    filter: blur(80px);
+}
+.card span:nth-child(1) 
+{
+    background: aqua;
+}
+.card span:nth-child(2) 
+{
+    background: violet;
+}
+.card span:nth-child(3) 
+{
+    background: yellow;
+}
+.card span:nth-child(4) 
+{
+ background: tomato;
+}
+.card .glass
+{
+    position: absolute;
+    width: 390px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border:1px solid #fff;
+    overflow: hidden;
+}
+.card .glass::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -45%;
+   
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    pointer-events: none;
+    transform: skewX(6deg);
+}
